@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_load"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <ProgressBar
+        android:id="@+id/pgb_load_loading"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentTop="true"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"/>
+
+    <RelativeLayout
+        android:id="@+id/rel_load_failed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/txv_load_failedIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_load_failed" />
+
+        <TextView
+            android:id="@+id/txv_load_failedHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txv_load_failedIcon"
+            android:text="页面加载失败，请重试" />
+
+        <Button
+            android:id="@+id/btn_load_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txv_load_failedHint"
+            android:layout_centerHorizontal="true"
+            android:text="重新加载" />
+    </RelativeLayout>
+
+</RelativeLayout>
